@@ -46,8 +46,8 @@ Modal.propTypes = {
 const ItemModal = () => {
   const { activeItem, openModal, closeModal } = useContext(ModalsContext);
   const [secondaryImageSrc, setSecondaryImageSrc] = useState("");
-  const minIncrease = 1;
-  const maxIncrease = 10;
+  const minIncrease = 1000;
+  const maxIncrease = 100000;
   const [bid, setBid] = useState();
   const [valid, setValid] = useState("");
   const [isSubmitting, setIsSubmitting] = useState("");
@@ -56,7 +56,7 @@ const ItemModal = () => {
 
   useEffect(() => {
     if (activeItem.secondaryImage === undefined) return;
-    import(`../assets/${activeItem.secondaryImage}.png`).then((src) => {
+    import(`../assets/${activeItem.secondaryImage}.jpg`).then((src) => {
       setSecondaryImageSrc(src.default)
     })
   }, [activeItem.secondaryImage])
@@ -117,7 +117,7 @@ const ItemModal = () => {
     }
     // Ensure input is small enough
     if (amount > status.amount + maxIncrease) {
-      setFeedback(`For the demo you can only increase the price up to ${activeItem.currency}${maxIncrease} per bid.`);
+      setFeedback(`You can only increase the price up to ${activeItem.currency}${maxIncrease} per bid.`);
       setValid("is-invalid");
       setIsSubmitting(false);
       return;
@@ -171,7 +171,6 @@ const ItemModal = () => {
           <div className="invalid-feedback">{feedback}</div>
         </div>
         <label className="form-label">Enter {minBid} or more</label>
-        <p className="text-muted">(This is just a demo, you&apos;re not bidding real money)</p>
       </div>
     </Modal>
   );
