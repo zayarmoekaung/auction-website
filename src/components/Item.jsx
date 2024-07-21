@@ -31,8 +31,10 @@ export const Item = ({ item }) => {
       if (remaining > 0) {
         setTimeLeft(formatTime(remaining));
         requestAnimationFrame(updateTimer);
-      } else {
+      } else if (item.startTime) {
         setTimeLeft("Item Ended");
+      }{
+        setTimeLeft("Upcoming Item");
       }
     };
 
