@@ -4,7 +4,9 @@ import { itemStatus } from "../utils/itemStatus";
 import { formatTime, formatMoney } from "../utils/formatString";
 import { ModalsContext } from "../contexts/ModalsProvider";
 import { ModalTypes } from "../utils/modalTypes";
-
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../firebase/config";
+import { auth } from "../firebase/config";
 export const Item = ({ item }) => {
   const { openModal } = useContext(ModalsContext);
   const exchange = {
@@ -15,11 +17,19 @@ export const Item = ({ item }) => {
   const [primaryImageSrc, setPrimaryImageSrc] = useState("");
   const [bids, setBids] = useState(0);
   const [amount, setAmount] = useState(item.startingPrice);
+  const [winner,setWinner] = useState("");
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
     const status = itemStatus(item);
     setBids(status.bids);
+    if (status.winner) {
+      getDoc(doc(db, "users", status.winner)).then((user) => {
+        setWinner(user.get("email"));
+      });
+    } else {
+      setWinner("");
+    }
     setAmount(formatMoney(item.currency, status.amount));
   }, [item]);
 
@@ -60,8 +70,11 @@ export const Item = ({ item }) => {
           <h6 className="card-subtitle mb-2 text-body-secondary">{item.subtitle}</h6>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item"><strong>{amount}</strong></li>
-          <li className="list-group-item">{bids} bids · {timeLeft}</li>
+          <li className="list-group-item"><strong>{amount}</strong>
+          { auth.currentUser.email == winner &&
+            <p class="text-success">You are current winning bidder</p>
+          }</li>
+          <li className="list-group-item">{bids} bids  · {timeLeft}</li>
         </ul>
       </div>
     </div>

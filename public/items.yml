@@ -1,7 +1,7 @@
 - id: 0
   primaryImage: car
   title: Chevrolet Sonic 2013
-  subtitle: เชฟโรเลต โซนิค
+  subtitle: 'estimate: 120000 ~ 200000 Baht'
   detail: Automatic transmission, 91 Gasoline, Seden/Salon ,Never installed LPG gas , Few Mileage just over 78000
   secondaryImage: car_2
   currency: Baht
@@ -9,17 +9,30 @@
   amount: 60000
   history: []
   startTime: 2024-07-22T00:05:00+00:00
-  endTime: 2024-07-23T00:05:00+00:00
+  endTime: 2024-07-23T21:00:00+07:00
 
 - id: 1
   primaryImage: gia
   title: GIA Certified Natural Jadeite Bangle 
-  subtitle: ''
-  detail: 
+  subtitle: 'estimate: 300000 ~ 550000 Baht'
+  detail: 'One loose caarving Bangle Braclet, Measurements - 74.67 x 15.86, Guarantee for natrual jadeite a-type jade'
   secondaryImage: gia_cer
   currency: Baht
-  startingPrice: 0
-  amount: 0
+  startingPrice: 150000
+  amount: 150000
+  history: []
+  startTime: 2024-07-22T00:05:00+00:00
+  endTime: 2024-07-23T21:00:00+07:00
+
+- id: 2
+  primaryImage: ring
+  title: GIA Certified Natural Jadeite Ring 
+  subtitle: 'estimate: 100000 ~ 200000 Baht'
+  detail: 'Center stone set in a closed back white metal ring, Shape - Oval , Cut - Cabochan , Measurements - 13.78 x 10.28 , Guarantee for natrual jadeite a-type jade '
+  secondaryImage: ring_cer
+  currency: Baht
+  startingPrice: 50000
+  amount: 50000
   history: []
   startTime: null
   endTime: null
