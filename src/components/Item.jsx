@@ -7,7 +7,11 @@ import { ModalTypes } from "../utils/modalTypes";
 
 export const Item = ({ item }) => {
   const { openModal } = useContext(ModalsContext);
-
+  const exchange = {
+    usd: 0,
+    yun: 0,
+    bhat: 1,
+  }
   const [primaryImageSrc, setPrimaryImageSrc] = useState("");
   const [bids, setBids] = useState(0);
   const [amount, setAmount] = useState(item.startingPrice);
