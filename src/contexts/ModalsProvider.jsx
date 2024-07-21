@@ -11,8 +11,8 @@ export const ModalsProvider = ({ children }) => {
   const openModal = (modalType, item = {}) => {
     if (item.startTime) {
       setActiveItem(item);
-      setCurrentModal(modalType);
     }
+    setCurrentModal(modalType);
   };
 
   const closeModal = () => {
