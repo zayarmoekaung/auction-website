@@ -11,7 +11,7 @@ export const Item = ({ item }) => {
     usd: 0,
     yun: 0,
     bhat: 1,
-  }
+  };
   const [primaryImageSrc, setPrimaryImageSrc] = useState("");
   const [bids, setBids] = useState(0);
   const [amount, setAmount] = useState(item.startingPrice);
@@ -33,7 +33,7 @@ export const Item = ({ item }) => {
         requestAnimationFrame(updateTimer);
       } else if (item.startTime) {
         setTimeLeft("Item Ended");
-      }{
+      } else {
         setTimeLeft("Upcoming Item");
       }
     };
@@ -43,9 +43,9 @@ export const Item = ({ item }) => {
 
   useEffect(() => {
     import(`../assets/${item.primaryImage}.jpeg`).then((src) => {
-      setPrimaryImageSrc(src.default)
-    })
-  }, [item.primaryImage])
+      setPrimaryImageSrc(src.default);
+    });
+  }, [item.primaryImage]);
 
   return (
     <div className="col">
@@ -70,11 +70,12 @@ export const Item = ({ item }) => {
 
 Item.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     startingPrice: PropTypes.number.isRequired,
     currency: PropTypes.string.isRequired,
-    endTime: PropTypes.object.isRequired,
+    endTime: PropTypes.instanceOf(Date).isRequired,
     primaryImage: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-  })
-}
+  }).isRequired
+};

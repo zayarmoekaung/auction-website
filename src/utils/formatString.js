@@ -3,7 +3,7 @@ const formatNumberWithCommas = (x) => {
 };
 
 const formatMoney = (currency, amount) => {
-  return `${currency}${formatNumberWithCommas(amount)}`;
+  return `${currency} ${formatNumberWithCommas(amount)}`;
 };
 
 const formatTime = (time) => {
@@ -33,5 +33,19 @@ const formatField = (item, bid) => {
   const bid_padded = bid.toString().padStart(5, "0");
   return `item${item_padded}_bid${bid_padded}`;
 };
-
-export { formatNumberWithCommas, formatMoney, formatTime, formatField };
+const formatDate = (date) => {
+  if (!(date instanceof Date)) {
+    date = new Date(date);
+  }
+  
+  return new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }).format(date);
+};
+export { formatNumberWithCommas, formatMoney, formatTime, formatField, formatDate };

@@ -5,7 +5,9 @@
   detail: Automatic transmission, 91 Gasoline, Seden/Salon ,Never installed LPG gas , Few Mileage just over 78000
   secondaryImage: car_2
   currency: Baht
+  startingPrice: 60000
   amount: 60000
+  history: []
   startTime: 2024-07-22T00:05:00+00:00
   endTime: 2024-07-23T00:05:00+00:00
 
@@ -16,6 +18,8 @@
   detail: 
   secondaryImage: gia_cer
   currency: Baht
-  amount: null
+  startingPrice: 0
+  amount: 0
+  history: []
   startTime: null
   endTime: null

@@ -6,6 +6,7 @@ import { auth, db } from "./config";
 export const AutoSignIn = () => {
   const [user, setUser] = useState(null);
   const [admin, setAdmin] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -16,9 +17,15 @@ export const AutoSignIn = () => {
         // Check if user is admin
         const userDocRef = doc(db, "users", user.uid);
         getDoc(userDocRef).then((docSnap) => {
-          if (docSnap.exists() && docSnap.data().admin) {
-            console.debug("User is admin");
-            setAdmin(true);
+          if (docSnap.exists()) {
+            if (docSnap.data().admin) {
+              console.debug("User is admin");
+              setAdmin(true);
+            }
+            if (docSnap.data().active) {
+              console.debug("User is active");
+              setActive(true);
+            }
           }
         });
       } else {
@@ -30,5 +37,5 @@ export const AutoSignIn = () => {
     return () => unsubscribe();
   }, []);
 
-  return { user, admin };
+  return { user, admin, active };
 };

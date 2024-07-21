@@ -19,7 +19,7 @@ import Footer from "./components/Footer";
 function App() {
   const demo = false;
 
-  const { admin } = AutoSignIn();
+  const { admin,active } = AutoSignIn();
 
   const Providers = ({ children }) => {
     return (
@@ -39,7 +39,7 @@ function App() {
         <Navbar admin={admin} />
         <SignUpModal />
         <Routes>
-          <Route path={import.meta.env.BASE_URL} Component={HomePage} />
+          <Route path={import.meta.env.BASE_URL} element={<HomePage active={active} />} />
           <Route
             exact
             path={import.meta.env.BASE_URL + "admin"}
