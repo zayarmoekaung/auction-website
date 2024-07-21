@@ -56,7 +56,7 @@ const ItemModal = () => {
 
   useEffect(() => {
     if (activeItem.secondaryImage === undefined) return;
-    import(`../assets/${activeItem.secondaryImage}.jpg`).then((src) => {
+    import(`../assets/${activeItem.secondaryImage}.jpeg`).then((src) => {
       setSecondaryImageSrc(src.default)
     })
   }, [activeItem.secondaryImage])
