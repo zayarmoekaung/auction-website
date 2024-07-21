@@ -1,121 +1,21 @@
 - id: 0
-  primaryImage: refrigerator
-  title: The Refrigerator
-  subtitle: Cool & Spacious
-  detail: A state-of-the-art stainless steel refrigerator with ample storage space, designed to keep your food fresh and organized.
-  secondaryImage: refrigerator
+  primaryImage: car
+  title: Chevrolet Sonic 2013
+  subtitle: เชฟโรเลต โซนิค
+  detail: Automatic transmission, 91 Gasoline, Seden/Salon ,Never installed LPG gas , Few Mileage just over 78000
+  secondaryImage: car_2
   currency: Baht
-  amount: 850000
-  endTime: 2024-07-25T00:05:00+00:00
+  amount: 60000
+  startTime: 2024-07-22T00:05:00+00:00
+  endTime: 2024-07-23T00:05:00+00:00
 
 - id: 1
-  primaryImage: sofa
-  title: The Sofa
-  subtitle: Cozy Comfort
-  detail: A plush three-seater sofa, offering both style and comfort, ideal for lounging and entertaining guests.
-  secondaryImage: sofa
-  currency: Baht
-  amount: 450000
-  endTime: 2024-07-25T00:10:00+00:00
-
-- id: 2
-  primaryImage: dining_table_set
-  title: The Dining Table Set
-  subtitle: Elegant Dining
-  detail: A beautifully crafted wooden dining table set, perfect for family meals and gatherings, enhancing the elegance of your dining space.
-  secondaryImage: dining_table_set
-  currency: Baht
-  amount: 700000
-  endTime: 2024-07-25T00:15:00+00:00
-
-- id: 3
-  primaryImage: washing_machine
-  title: The Washing Machine
-  subtitle: Effortless Laundry
-  detail: A reliable and efficient washing machine, designed to handle all your laundry needs with ease and convenience.
-  secondaryImage: washing_machine
-  currency: Baht
-  amount: 350000
-  endTime: 2024-07-25T00:20:00+00:00
-
-- id: 4
-  primaryImage: led_television
-  title: The LED Television
-  subtitle: Visual Delight
-  detail: A top-of-the-line LED television, providing an immersive viewing experience with stunning picture clarity and vibrant colors.
-  secondaryImage: led_television
-  currency: Baht
-  amount: 500000
-  endTime: 2024-07-25T00:25:00+00:00
-
-- id: 5
-  primaryImage: microwave_oven
-  title: The Microwave Oven
-  subtitle: Quick & Easy Cooking
-  detail: A powerful microwave oven, perfect for quick meals and reheating leftovers, featuring various cooking options and a sleek design.
-  secondaryImage: microwave_oven
-  currency: Baht
-  amount: 150000
-  endTime: 2024-07-25T00:30:00+00:00
-
-- id: 6
-  primaryImage: booBahthelf
-  title: The BooBahthelf
-  subtitle: Organized Living
-  detail: A spacious and durable wooden booBahthelf, providing ample storage for your booBaht, decor, and personal items, adding a touch of elegance to any room.
-  secondaryImage: booBahthelf
-  currency: Baht
-  amount: 120000
-  endTime: 2024-07-25T00:35:00+00:00
-
-- id: 7
-  primaryImage: kitchen_set
-  title: The Kitchen Set
-  subtitle: Culinary Essentials
-  detail: A comprehensive kitchen set, featuring durable and stylish pots, pans, and utensils, perfect for any home cook.
-  secondaryImage: kitchen_set
-  currency: Baht
-  amount: 80000
-  endTime: 2024-07-25T00:40:00+00:00
-
-- id: 8
-  primaryImage: vacuum_cleaner
-  title: The Vacuum Cleaner
-  subtitle: Spotless Clean
-  detail: An efficient and easy-to-use vacuum cleaner, designed to keep your home clean and dust-free with minimal effort.
-  secondaryImage: vacuum_cleaner
-  currency: Baht
-  amount: 180000
-  endTime: 2024-07-25T00:45:00+00:00
-
-- id: 9
-  primaryImage: bed
-  title: The Bed
-  subtitle: Restful Nights
-  detail: A luxurious queen-size bed, offering a comfortable mattress and a sleek frame, ensuring a good night's sleep every night.
-  secondaryImage: bed
-  currency: Baht
-  amount: 650000
-  endTime: 2024-07-25T00:50:00+00:00
-
-- id: 10
-  primaryImage: air_conditioner
-  title: The Air Conditioner
-  subtitle: Cool Comfort
-  detail: A high-performance air conditioner, designed to keep your home cool and comfortable, featuring energy-saving technology and a compact design.
-  secondaryImage: air_conditioner
-  currency: Baht
-  amount: 400000
-  endTime: 2024-07-25T00:55:00+00:00
-
-- id: 11
   primaryImage: gia
   title: GIA Certified Natural Jadeite Bangle 
-  subtitle: Breezy Elegance
+  subtitle: ''
   detail: 
   secondaryImage: gia_cer
   currency: Baht
-  amount: 150000
-  endTime: 2024-07-25T01:00:00+00:00
-
-
+  amount: null
+  startTime: null
+  endTime: null
