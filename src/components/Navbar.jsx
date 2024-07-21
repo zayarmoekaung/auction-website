@@ -57,10 +57,10 @@ const Navbar = ({ admin }) => {
         className="d-inline-block align-text-top"
       />
       Panther Nine 
+      <div className="navbar-text text-white me-2">Contact: bid@panthernine.com</div>
     </div>
     <div className="row row-cols-auto">
       <div className="navbar-brand">{user}</div>
-      <div className="navbar-text text-white me-2">Contact: bid@panthernine.com</div>
       {admin && (
         <button onClick={handleAdmin} className="btn btn-secondary me-2">{adminButtonText}</button>
       )}
