@@ -47,28 +47,30 @@ const Navbar = ({ admin }) => {
 
   return (
     <nav className="navbar navbar-dark bg-primary">
-      <div className="container-fluid">
-        <div className="navbar-brand mb-0 h1 me-auto">
-          <img
-            src={import.meta.env.BASE_URL + "logo.png"}
-            alt="Logo"
-            width="30"
-            height="24"
-            className="d-inline-block align-text-top"
-          />
-          Panther Nine 
-        </div>
-        <div className="row row-cols-auto">
-          <div className="navbar-brand">{user}</div>
-          {admin && (
-            <button onClick={handleAdmin} className="btn btn-secondary me-2">{adminButtonText}</button>
-          )}
-          {authButtonText == "Sign up" &&
-              <button onClick={handleAuth} className="btn btn-secondary me-2">{authButtonText}</button>
-          }
-        </div>
-      </div>
-    </nav>
+  <div className="container-fluid">
+    <div className="navbar-brand mb-0 h1 me-auto">
+      <img
+        src={import.meta.env.BASE_URL + "logo.png"}
+        alt="Logo"
+        width="30"
+        height="24"
+        className="d-inline-block align-text-top"
+      />
+      Panther Nine 
+    </div>
+    <div className="row row-cols-auto">
+      <div className="navbar-brand">{user}</div>
+      <div className="navbar-text text-white me-2">Contact: bid@panthernine.com</div>
+      {admin && (
+        <button onClick={handleAdmin} className="btn btn-secondary me-2">{adminButtonText}</button>
+      )}
+      {authButtonText === "Sign up" && (
+        <button onClick={handleAuth} className="btn btn-secondary me-2">{authButtonText}</button>
+      )}
+    </div>
+  </div>
+</nav>
+
   );
 };
 
