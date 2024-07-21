@@ -63,7 +63,9 @@ const Navbar = ({ admin }) => {
           {admin && (
             <button onClick={handleAdmin} className="btn btn-secondary me-2">{adminButtonText}</button>
           )}
-          <button onClick={handleAuth} className="btn btn-secondary me-2">{authButtonText}</button>
+          {authButtonText == "Sign up" &&
+              <button onClick={handleAuth} className="btn btn-secondary me-2">{authButtonText}</button>
+          }
         </div>
       </div>
     </nav>

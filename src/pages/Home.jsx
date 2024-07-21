@@ -5,13 +5,8 @@ import { ItemModal } from "../components/Modal";
 function HomePage({ active }) {
   return (
     <div className="container mt-3">
-      {!active && (
-        <div className="alert alert-warning" role="alert">
-          Account is not activated, please contact Panther 9 to activate your account.
-        </div>
-      )}
-      {active && <Grid />}
-      <ItemModal />
+      <Grid />
+      <ItemModal active={active}/>
     </div>
   );
 }

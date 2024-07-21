@@ -44,7 +44,7 @@ Modal.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element)
 }
 
-const ItemModal = () => {
+const ItemModal = ({ active }) => {
   const { activeItem, openModal, closeModal } = useContext(ModalsContext);
   const [secondaryImageSrc, setSecondaryImageSrc] = useState("");
   const minIncrease = 1000;
@@ -108,10 +108,19 @@ const ItemModal = () => {
     }
 
     if (auth.currentUser.displayName == null) {
-      setFeedback("You must provide a username before bidding!");
+      setFeedback("You must signup before bidding!");
       setValid("is-invalid");
       setTimeout(() => {
         openModal(ModalTypes.SIGN_UP);
+        setIsSubmitting(false);
+        setValid("");
+      }, 1000);
+      return;
+    }
+    if (!active) {
+      setFeedback("Your account is not activated!");
+      setValid("is-invalid");
+      setTimeout(() => {
         setIsSubmitting(false);
         setValid("");
       }, 1000);
